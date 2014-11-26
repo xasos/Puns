@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"github.com/codegangsta/martini"
 	"io/ioutil"
+	"math/rand"
 )
 
 func main() {
