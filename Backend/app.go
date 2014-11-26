@@ -5,6 +5,7 @@ import (
 	"github.com/codegangsta/martini"
 	"io/ioutil"
 	"math/rand"
+	"encoding/json"
 )
 
 func main() {
@@ -15,6 +16,10 @@ func main() {
         fmt.Printf("File error: %v\n", e)
     }
     fmt.Printf("%s\n", string(file))
+    
+    var jsontype jsonobject
+    json.Unmarshal(file, &jsontype)
+    fmt.Printf("Results: %v\n", jsontype)
 
     m.Get("/api/random", func() string {
         return "test"
