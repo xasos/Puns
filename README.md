@@ -7,9 +7,8 @@ Puns is an iOS application built in Swift that shows you the best puns. Since I 
 ## Running Application
 ```sh
 # Frontend is a standard Xcode project. All you need to do is hit run.
-
 # Backend
-go run app.go
+$ go run app.go
 ```
 
 ## License
