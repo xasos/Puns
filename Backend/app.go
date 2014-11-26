@@ -6,6 +6,7 @@ import (
 	"io/ioutil"
 	"math/rand"
 	"encoding/json"
+	"time"
 )
 
 func main() {
@@ -23,12 +24,11 @@ func main() {
 
        p := Puns{}
        json.Unmarshal([]byte(file), &p)
+
+       rand.Seed(time.Now().UnixNano())
+       fmt.Println(rand.Intn(100))
     
     m.Get("/api/random", func() string {
-        s1 := rand.NewSource(42)
-        r1 := rand.New(s1)
-        fmt.Print(r1.Intn(99))
-
 	return "test"
     })
 
