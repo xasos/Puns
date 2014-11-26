@@ -10,6 +10,10 @@ import (
 
 func main() {
     m := martini.Classic()
+    
+    type jsonobject struct {
+    Object ObjectType
+    }
 
     file, e := ioutil.ReadFile("./puns.json")    
     if e != nil {
@@ -20,6 +24,10 @@ func main() {
     var jsontype jsonobject
     json.Unmarshal(file, &jsontype)
     fmt.Printf("Results: %v\n", jsontype)
+
+    s1 := rand.NewSource(42)
+    r1 := rand.New(s1)
+    fmt.Print(r1.Intn(100))
 
     m.Get("/api/random", func() string {
         return "test"
