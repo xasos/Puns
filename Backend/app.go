@@ -11,26 +11,25 @@ import (
 func main() {
     m := martini.Classic()
     
-    type jsonobject struct {
-    Object ObjectType
+    type Puns struct {
+	Pun string
     }
-
+    
+    // Import Puns.json file and serialize into go struct
     file, e := ioutil.ReadFile("./puns.json")    
     if e != nil {
         fmt.Printf("File error: %v\n", e)
     }
-    fmt.Printf("%s\n", string(file))
+
+       p := Puns{}
+       json.Unmarshal([]byte(file), &p)
     
-    var jsontype jsonobject
-    json.Unmarshal(file, &jsontype)
-    fmt.Printf("Results: %v\n", jsontype)
-
-    s1 := rand.NewSource(42)
-    r1 := rand.New(s1)
-    fmt.Print(r1.Intn(100))
-
     m.Get("/api/random", func() string {
-        return "test"
+        s1 := rand.NewSource(42)
+        r1 := rand.New(s1)
+        fmt.Print(r1.Intn(99))
+
+	return "test"
     })
 
     m.Run()
