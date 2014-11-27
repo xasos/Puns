@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class ViewController: UIViewController {
     @IBOutlet weak var punLabel: UILabel!
@@ -30,6 +31,16 @@ class ViewController: UIViewController {
         view.backgroundColor = randomColor
         punLabel.text = punBook.randomPun()
         punButton.tintColor = randomColor
+        loadStuff()
+    }
+    
+    func loadStuff() {
+        Alamofire.request(.GET, "http://numbersapi.com/random", parameters: nil)
+            .response { (request, response, data, error) in
+                println(request)
+                println(response)
+                println(error)
+        }
     }
 }
 

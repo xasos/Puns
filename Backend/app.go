@@ -27,7 +27,7 @@ func main() {
 
 	m.Get("/api/random", func() string {
 		rand.Seed(time.Now().UnixNano())
-	        fmt.Println(rand.Intn(100))
+	    fmt.Println(rand.Intn(100))
 		return "test"
 	})
 
