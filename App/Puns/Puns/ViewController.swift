@@ -10,10 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var punLabel: UILabel!
-
+    
+    let punBook = PunBook()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        punLabel.text = punBook.randomPun()
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,8 +23,8 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func showPun() {
-        punLabel.text = "another interesting pun"
+    @IBAction func showPun() {        
+        punLabel.text = punBook.randomPun()
     }
 
 }
