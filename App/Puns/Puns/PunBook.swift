@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Alamofire
 
 struct PunBook {
     let punsArray = [
@@ -21,5 +22,14 @@ struct PunBook {
         var randomNumber = Int(unsignedRandomNumber)
         
         return punsArray[randomNumber]
+    }
+}
+
+func getRandomPun() {
+    Alamofire.request(.GET, "http://getpuns.herokuapp.com/api/random", parameters: nil)
+        .response { (request, response, data, error) in
+            println(request)
+            println(response)
+            println(error)
     }
 }
