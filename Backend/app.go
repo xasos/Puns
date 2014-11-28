@@ -12,16 +12,18 @@ import (
 func main() {
 	m := martini.Classic()
 
-	// Import Puns.json file and serialize into go struct
+	// Import Puns.json file and serialize into Go struct
 	file, err := ioutil.ReadFile("./puns.json")
 	if err != nil {
 		fmt.Printf("File error: %v\n", err)
 	}
 
+	// Define Pun Struct
 	type Puns []struct {
 		Pun string `json:"Pun"`
 	}	
 
+	// Define and unmarshal pun
 	var p Puns
 	err = json.Unmarshal([]byte(file), &p)
 	if err != nil {
@@ -36,6 +38,7 @@ func main() {
 		rand.Seed(time.Now().UnixNano())
 	    randomNum := rand.Intn(100)
 
+	    // Marshal random pun into JSON
 	    b, err := json.Marshal(p[randomNum])
 	    if err != nil {
 	    	fmt.Println("error:", err)
