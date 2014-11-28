@@ -44,10 +44,9 @@ func main() {
 	    	fmt.Println("error:", err)
 	    }
 	    
-	    // convert byte array into string
+	    // convert byte array into string and return
 	    s := string(b[:])
-	    fmt.Printf(s)
-		return s
+	    return s
 	})
 
 	m.Run()
