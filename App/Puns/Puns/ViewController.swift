@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        punLabel.text = punBook.randomPun()
+        punLabel.text = punBook.getRandomPun()
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,18 +29,8 @@ class ViewController: UIViewController {
     @IBAction func showPun() {
         var randomColor = colorWheel.randomColor()
         view.backgroundColor = randomColor
-        punLabel.text = punBook.randomPun()
+        punLabel.text = punBook.getRandomPun()
         punButton.tintColor = randomColor
-        loadStuff()
-    }
-    
-    func loadStuff() {
-        Alamofire.request(.GET, "hhttp://httpbin.org/get", parameters: nil)
-            .response { (request, response, data, error) in
-                println(request)
-                println(response)
-                println(error)
-        }
     }
 }
 

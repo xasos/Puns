@@ -9,27 +9,21 @@
 import Foundation
 import Alamofire
 
-struct PunBook {
-    let punsArray = [
-        "When a clock is hungry it goes back four seconds.",
-        "asdasdasda",
-        "adasdasdasdasd"
-    ]
-    
-    func randomPun() -> String {
-        var unsignedArrayCount = UInt32(punsArray.count)
-        var unsignedRandomNumber = arc4random_uniform(unsignedArrayCount)
-        var randomNumber = Int(unsignedRandomNumber)
-        
-        return punsArray[randomNumber]
+class PunBook {
+    func getRandomPun() -> String {
+        Alamofire.request(.GET, "http://getpuns.herokuapp.com/api/random", parameters: nil)
+            .responseJSON { (request, response, json, error) in
+                println(response)
+                println(json)
+                if (json != nil) {
+                    var jsonObj = JSON(json!)
+                    let data = jsonObj["pun"].stringValue
+                }
+                else {
+                    println("error")
+                }
+        }
+        return "asdasd"
     }
 }
 
-func getRandomPun() {
-    Alamofire.request(.GET, "http://getpuns.herokuapp.com/api/random", parameters: nil)
-        .response { (request, response, data, error) in
-            println(request)
-            println(response)
-            println(error)
-    }
-}

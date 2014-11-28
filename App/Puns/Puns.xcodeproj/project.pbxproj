@@ -24,6 +24,7 @@
 		EBB8DE591A28390D007B9E9A /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBB8DE581A28390D007B9E9A /* Interface.storyboard */; };
 		EBB8DE5B1A28390D007B9E9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBB8DE5A1A28390D007B9E9A /* Images.xcassets */; };
 		EBB8DE5E1A28390D007B9E9A /* Puns WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = EBB8DE411A28390D007B9E9A /* Puns WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		EBB8DE691A28EEAF007B9E9A /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB8DE681A28EEAE007B9E9A /* SwiftyJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +114,7 @@
 		EBB8DE571A28390D007B9E9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EBB8DE581A28390D007B9E9A /* Interface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Interface.storyboard; sourceTree = "<group>"; };
 		EBB8DE5A1A28390D007B9E9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EBB8DE681A28EEAE007B9E9A /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 				EB33D5FF1A278DF000C9D6A6 /* AppDelegate.swift */,
 				EB33D6011A278DF000C9D6A6 /* ViewController.swift */,
 				EB33D61F1A2793AE00C9D6A6 /* PunBook.swift */,
+				EBB8DE681A28EEAE007B9E9A /* SwiftyJSON.swift */,
 				EB33D6211A279EA700C9D6A6 /* ColorWheel.swift */,
 				EB33D6031A278DF000C9D6A6 /* Main.storyboard */,
 				EB33D6061A278DF000C9D6A6 /* Images.xcassets */,
@@ -449,6 +452,7 @@
 				EB33D6201A2793AE00C9D6A6 /* PunBook.swift in Sources */,
 				EB33D6021A278DF000C9D6A6 /* ViewController.swift in Sources */,
 				EB33D6001A278DF000C9D6A6 /* AppDelegate.swift in Sources */,
+				EBB8DE691A28EEAF007B9E9A /* SwiftyJSON.swift in Sources */,
 				EB33D6221A279EA700C9D6A6 /* ColorWheel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
