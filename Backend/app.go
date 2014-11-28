@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/codegangsta/martini"
+	"github.com/codegangsta/martini-contrib/render"
 	"io/ioutil"
 	"math/rand"
 	"time"
@@ -11,6 +12,7 @@ import (
 
 func main() {
 	m := martini.Classic()
+	m.Use(render.Renderer())
 
 	// Import Puns.json file and serialize into Go struct
 	file, err := ioutil.ReadFile("./puns.json")
@@ -29,7 +31,11 @@ func main() {
 	if err != nil {
 		fmt.Println("error:", err)
 	}
-		
+	
+	m.Get("/", func(r render.Render) {
+		r.HTML(200, "index", nil)
+	})
+
 	m.Get("/api", func() string {
 		return "{\"message\":\"Welcome! Please refer to the docs for API calls\"}"
 	})
