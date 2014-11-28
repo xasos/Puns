@@ -35,7 +35,7 @@ class ViewController: UIViewController {
     }
     
     func loadStuff() {
-        Alamofire.request(.GET, "http://numbersapi.com/random", parameters: nil)
+        Alamofire.request(.GET, "hhttp://httpbin.org/get", parameters: nil)
             .response { (request, response, data, error) in
                 println(request)
                 println(response)

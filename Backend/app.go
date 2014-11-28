@@ -12,23 +12,39 @@ import (
 func main() {
 	m := martini.Classic()
 
-	type Puns struct {
-		Pun string
-	}
-
 	// Import Puns.json file and serialize into go struct
-	file, e := ioutil.ReadFile("./puns.json")
-	if e != nil {
-		fmt.Printf("File error: %v\n", e)
+	file, err := ioutil.ReadFile("./puns.json")
+	if err != nil {
+		fmt.Printf("File error: %v\n", err)
 	}
 
-	p := Puns{}
-	json.Unmarshal([]byte(file), &p)
+	type Puns []struct {
+		Pun string `json:"Pun"`
+	}	
+
+	var p Puns
+	err = json.Unmarshal([]byte(file), &p)
+	if err != nil {
+		fmt.Println("error:", err)
+	}
+		
+	m.Get("/api", func() string {
+		return "{\"message\":\"Welcome! Please refer to the docs for API calls\"}"
+	})
 
 	m.Get("/api/random", func() string {
 		rand.Seed(time.Now().UnixNano())
-	    fmt.Println(rand.Intn(100))
-		return "test"
+	    randomNum := rand.Intn(100)
+
+	    b, err := json.Marshal(p[randomNum])
+	    if err != nil {
+	    	fmt.Println("error:", err)
+	    }
+	    
+	    // convert byte array into string
+	    s := string(b[:])
+	    fmt.Printf(s)
+		return s
 	})
 
 	m.Run()
