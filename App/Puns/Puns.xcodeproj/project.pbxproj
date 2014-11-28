@@ -16,6 +16,14 @@
 		EB33D6201A2793AE00C9D6A6 /* PunBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB33D61F1A2793AE00C9D6A6 /* PunBook.swift */; };
 		EB33D6221A279EA700C9D6A6 /* ColorWheel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB33D6211A279EA700C9D6A6 /* ColorWheel.swift */; };
 		EB33D64F1A27DCC200C9D6A6 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB33D64C1A27DC3700C9D6A6 /* Alamofire.framework */; };
+		EBB8DE441A28390D007B9E9A /* WatchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBB8DE431A28390D007B9E9A /* WatchKit.framework */; };
+		EBB8DE4A1A28390D007B9E9A /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB8DE491A28390D007B9E9A /* InterfaceController.swift */; };
+		EBB8DE4C1A28390D007B9E9A /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB8DE4B1A28390D007B9E9A /* NotificationController.swift */; };
+		EBB8DE4E1A28390D007B9E9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBB8DE4D1A28390D007B9E9A /* Images.xcassets */; };
+		EBB8DE521A28390D007B9E9A /* Puns Watch App.app in Resources */ = {isa = PBXBuildFile; fileRef = EBB8DE511A28390D007B9E9A /* Puns Watch App.app */; };
+		EBB8DE591A28390D007B9E9A /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBB8DE581A28390D007B9E9A /* Interface.storyboard */; };
+		EBB8DE5B1A28390D007B9E9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBB8DE5A1A28390D007B9E9A /* Images.xcassets */; };
+		EBB8DE5E1A28390D007B9E9A /* Puns WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = EBB8DE411A28390D007B9E9A /* Puns WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +48,20 @@
 			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
 			remoteInfo = AlamofireTests;
 		};
+		EBB8DE531A28390D007B9E9A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EB33D5F21A278DF000C9D6A6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EBB8DE501A28390D007B9E9A;
+			remoteInfo = "Puns Watch App";
+		};
+		EBB8DE5C1A28390D007B9E9A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EB33D5F21A278DF000C9D6A6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EBB8DE401A28390D007B9E9A;
+			remoteInfo = "Puns WatchKit Extension";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -51,6 +73,17 @@
 			files = (
 			);
 			name = "Copy Files (1 item)";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBB8DE671A28390D007B9E9A /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				EBB8DE5E1A28390D007B9E9A /* Puns WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -69,6 +102,17 @@
 		EB33D61F1A2793AE00C9D6A6 /* PunBook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PunBook.swift; sourceTree = "<group>"; };
 		EB33D6211A279EA700C9D6A6 /* ColorWheel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorWheel.swift; sourceTree = "<group>"; };
 		EB33D63A1A27D78700C9D6A6 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = ../Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
+		EBB8DE411A28390D007B9E9A /* Puns WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Puns WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBB8DE431A28390D007B9E9A /* WatchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchKit.framework; path = System/Library/Frameworks/WatchKit.framework; sourceTree = SDKROOT; };
+		EBB8DE471A28390D007B9E9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBB8DE481A28390D007B9E9A /* PushNotificationPayload.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PushNotificationPayload.json; sourceTree = "<group>"; };
+		EBB8DE491A28390D007B9E9A /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		EBB8DE4B1A28390D007B9E9A /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		EBB8DE4D1A28390D007B9E9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EBB8DE511A28390D007B9E9A /* Puns Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Puns Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBB8DE571A28390D007B9E9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBB8DE581A28390D007B9E9A /* Interface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Interface.storyboard; sourceTree = "<group>"; };
+		EBB8DE5A1A28390D007B9E9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +131,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EBB8DE3E1A28390D007B9E9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBB8DE441A28390D007B9E9A /* WatchKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -95,6 +147,9 @@
 			children = (
 				EB33D5FC1A278DF000C9D6A6 /* Puns */,
 				EB33D6121A278DF000C9D6A6 /* PunsTests */,
+				EBB8DE451A28390D007B9E9A /* Puns WatchKit Extension */,
+				EBB8DE551A28390D007B9E9A /* Puns Watch App */,
+				EBB8DE421A28390D007B9E9A /* Frameworks */,
 				EB33D5FB1A278DF000C9D6A6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -104,6 +159,8 @@
 			children = (
 				EB33D5FA1A278DF000C9D6A6 /* Puns.app */,
 				EB33D60F1A278DF000C9D6A6 /* PunsTests.xctest */,
+				EBB8DE411A28390D007B9E9A /* Puns WatchKit Extension.appex */,
+				EBB8DE511A28390D007B9E9A /* Puns Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -158,6 +215,52 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		EBB8DE421A28390D007B9E9A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EBB8DE431A28390D007B9E9A /* WatchKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EBB8DE451A28390D007B9E9A /* Puns WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				EBB8DE491A28390D007B9E9A /* InterfaceController.swift */,
+				EBB8DE4B1A28390D007B9E9A /* NotificationController.swift */,
+				EBB8DE4D1A28390D007B9E9A /* Images.xcassets */,
+				EBB8DE461A28390D007B9E9A /* Supporting Files */,
+			);
+			path = "Puns WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		EBB8DE461A28390D007B9E9A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EBB8DE471A28390D007B9E9A /* Info.plist */,
+				EBB8DE481A28390D007B9E9A /* PushNotificationPayload.json */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EBB8DE551A28390D007B9E9A /* Puns Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				EBB8DE581A28390D007B9E9A /* Interface.storyboard */,
+				EBB8DE5A1A28390D007B9E9A /* Images.xcassets */,
+				EBB8DE561A28390D007B9E9A /* Supporting Files */,
+			);
+			path = "Puns Watch App";
+			sourceTree = "<group>";
+		};
+		EBB8DE561A28390D007B9E9A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EBB8DE571A28390D007B9E9A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -169,10 +272,12 @@
 				EB33D5F71A278DF000C9D6A6 /* Frameworks */,
 				EB33D5F81A278DF000C9D6A6 /* Resources */,
 				EB33D6451A27DB4200C9D6A6 /* Copy Files (1 item) */,
+				EBB8DE671A28390D007B9E9A /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				EBB8DE5D1A28390D007B9E9A /* PBXTargetDependency */,
 			);
 			name = Puns;
 			productName = Puns;
@@ -197,6 +302,39 @@
 			productReference = EB33D60F1A278DF000C9D6A6 /* PunsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		EBB8DE401A28390D007B9E9A /* Puns WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBB8DE661A28390D007B9E9A /* Build configuration list for PBXNativeTarget "Puns WatchKit Extension" */;
+			buildPhases = (
+				EBB8DE3D1A28390D007B9E9A /* Sources */,
+				EBB8DE3E1A28390D007B9E9A /* Frameworks */,
+				EBB8DE3F1A28390D007B9E9A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EBB8DE541A28390D007B9E9A /* PBXTargetDependency */,
+			);
+			name = "Puns WatchKit Extension";
+			productName = "Puns WatchKit Extension";
+			productReference = EBB8DE411A28390D007B9E9A /* Puns WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		EBB8DE501A28390D007B9E9A /* Puns Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBB8DE651A28390D007B9E9A /* Build configuration list for PBXNativeTarget "Puns Watch App" */;
+			buildPhases = (
+				EBB8DE4F1A28390D007B9E9A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Puns Watch App";
+			productName = "Puns Watch App";
+			productReference = EBB8DE511A28390D007B9E9A /* Puns Watch App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -212,6 +350,12 @@
 					EB33D60E1A278DF000C9D6A6 = {
 						CreatedOnToolsVersion = 6.1;
 						TestTargetID = EB33D5F91A278DF000C9D6A6;
+					};
+					EBB8DE401A28390D007B9E9A = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					EBB8DE501A28390D007B9E9A = {
+						CreatedOnToolsVersion = 6.2;
 					};
 				};
 			};
@@ -236,6 +380,8 @@
 			targets = (
 				EB33D5F91A278DF000C9D6A6 /* Puns */,
 				EB33D60E1A278DF000C9D6A6 /* PunsTests */,
+				EBB8DE401A28390D007B9E9A /* Puns WatchKit Extension */,
+				EBB8DE501A28390D007B9E9A /* Puns Watch App */,
 			);
 		};
 /* End PBXProject section */
@@ -275,6 +421,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EBB8DE3F1A28390D007B9E9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBB8DE4E1A28390D007B9E9A /* Images.xcassets in Resources */,
+				EBB8DE521A28390D007B9E9A /* Puns Watch App.app in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBB8DE4F1A28390D007B9E9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBB8DE591A28390D007B9E9A /* Interface.storyboard in Resources */,
+				EBB8DE5B1A28390D007B9E9A /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -297,6 +461,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EBB8DE3D1A28390D007B9E9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBB8DE4C1A28390D007B9E9A /* NotificationController.swift in Sources */,
+				EBB8DE4A1A28390D007B9E9A /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -304,6 +477,16 @@
 			isa = PBXTargetDependency;
 			target = EB33D5F91A278DF000C9D6A6 /* Puns */;
 			targetProxy = EB33D6101A278DF000C9D6A6 /* PBXContainerItemProxy */;
+		};
+		EBB8DE541A28390D007B9E9A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EBB8DE501A28390D007B9E9A /* Puns Watch App */;
+			targetProxy = EBB8DE531A28390D007B9E9A /* PBXContainerItemProxy */;
+		};
+		EBB8DE5D1A28390D007B9E9A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EBB8DE401A28390D007B9E9A /* Puns WatchKit Extension */;
+			targetProxy = EBB8DE5C1A28390D007B9E9A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -408,6 +591,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Puns/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -418,6 +602,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Puns/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -458,6 +643,66 @@
 			};
 			name = Release;
 		};
+		EBB8DE5F1A28390D007B9E9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Puns WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		EBB8DE601A28390D007B9E9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Puns WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		EBB8DE611A28390D007B9E9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = Puns_WatchKit_Extension;
+				INFOPLIST_FILE = "Puns Watch App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		EBB8DE621A28390D007B9E9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				IBSC_MODULE = Puns_WatchKit_Extension;
+				INFOPLIST_FILE = "Puns Watch App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -487,6 +732,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		EBB8DE651A28390D007B9E9A /* Build configuration list for PBXNativeTarget "Puns Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBB8DE611A28390D007B9E9A /* Debug */,
+				EBB8DE621A28390D007B9E9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EBB8DE661A28390D007B9E9A /* Build configuration list for PBXNativeTarget "Puns WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBB8DE5F1A28390D007B9E9A /* Debug */,
+				EBB8DE601A28390D007B9E9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

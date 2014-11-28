@@ -10,7 +10,7 @@ import Foundation
 
 struct PunBook {
     let punsArray = [
-        "asdasd",
+        "When a clock is hungry it goes back four seconds.",
         "asdasdasda",
         "adasdasdasdasd"
     ]
