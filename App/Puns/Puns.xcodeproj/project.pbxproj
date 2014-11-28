@@ -744,6 +744,7 @@
 				EBB8DE621A28390D007B9E9A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EBB8DE661A28390D007B9E9A /* Build configuration list for PBXNativeTarget "Puns WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -752,6 +753,7 @@
 				EBB8DE601A28390D007B9E9A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

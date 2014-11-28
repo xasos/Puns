@@ -10,20 +10,19 @@ import Foundation
 import Alamofire
 
 class PunBook {
+    var punString: String = ""
     func getRandomPun() -> String {
         Alamofire.request(.GET, "http://getpuns.herokuapp.com/api/random", parameters: nil)
             .responseJSON { (request, response, json, error) in
-                println(response)
-                println(json)
                 if (json != nil) {
                     var jsonObj = JSON(json!)
-                    let data = jsonObj["pun"].stringValue
+                    var data = jsonObj["Pun"].stringValue
+                    self.punString = data
                 }
                 else {
                     println("error")
                 }
         }
-        return "asdasd"
+        return punString
     }
 }
-
