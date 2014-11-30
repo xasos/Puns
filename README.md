@@ -7,7 +7,6 @@ Puns is an iOS/Apple Watch application built in Swift that shows you the best pu
 ## Running Application
 ```sh
 # Frontend is a standard Xcode project. All you need to do is hit run.
-
 # Backend
 $ godep restore
 $ go run app.go
