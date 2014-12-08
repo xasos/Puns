@@ -115,6 +115,7 @@
 		EBB8DE581A28390D007B9E9A /* Interface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Interface.storyboard; sourceTree = "<group>"; };
 		EBB8DE5A1A28390D007B9E9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EBB8DE681A28EEAE007B9E9A /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		EBE6BA411A354AB900C506F7 /* Puns.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Puns.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +171,7 @@
 		EB33D5FC1A278DF000C9D6A6 /* Puns */ = {
 			isa = PBXGroup;
 			children = (
+				EBE6BA411A354AB900C506F7 /* Puns.entitlements */,
 				EB33D63A1A27D78700C9D6A6 /* Alamofire.xcodeproj */,
 				EB33D5FF1A278DF000C9D6A6 /* AppDelegate.swift */,
 				EB33D6011A278DF000C9D6A6 /* ViewController.swift */,
@@ -349,6 +351,12 @@
 				TargetAttributes = {
 					EB33D5F91A278DF000C9D6A6 = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = 4ZQ29WZR36;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					EB33D60E1A278DF000C9D6A6 = {
 						CreatedOnToolsVersion = 6.1;
@@ -595,10 +603,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Puns/Puns.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Puns/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -606,10 +618,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Puns/Puns.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Puns/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

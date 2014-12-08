@@ -31,5 +31,4 @@ class InterfaceController: WKInterfaceController {
         NSLog("%@ did deactivate", self)
         super.didDeactivate()
     }
-
 }
